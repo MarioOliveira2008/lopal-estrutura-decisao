@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da adivinhacao</title>
     <script>
-prompt ("Qual número estou Pensando?")
 
-let numeroAleatorio = Math.random()*10
-let numeroAleatorioInteiro = Math.round(numeroAleatorio)
-let resposta = prompt("Qual numero estou pensando?")
-if(resposta == numeroAleatorioInteiro){
-    document.write(" Parabens!voce acertou!")
-}else{
-    document.write(" Voce perdeu !")
-}
+
+let numeroAleatorio = Math.random()*10+ 1;
+let numeroAleatorioInteiro = Math.floor(numeroAleatorio)
+//document.write(numeroAleatorioInteiro)
+
+let resposta = prompt("Estou pensando em um numero de 1 a 10. Tente adivinhar")
+
+let resultado = (resposta >=1 && resposta <=10) ?
+                   (resposta == numeroAleatorioInteiro) ?
+                        "Parabens vc acertou!":
+                        "Voce errou! O numero que eu pensei era " +
+                            numeroAleatorioInteiro + "!":
+                        "Numero invalido."
+
+document.write(resultado);
+
+//if(resposta == numeroAleatorioInteiro){
+    //document.write(" Parabens!voce acertou!")
+//}else{
+   // document.write(" Voce perdeu ! O numero que eu pensei era " + numeroAleatorioInteiro)
+//}else if(numeroAleatorioInteiro){
+  //  document.write("Errou tente novamente!.")
+//}
 
 
 
