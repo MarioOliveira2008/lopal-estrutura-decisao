@@ -62,6 +62,35 @@
                           (dataDeHoje == 6) ? " Sábado":
                           "Dia da semana invalido";
         document.write(" Hoje é" + diaDaSemana + ".")
+        
+        //programação declarativa
+    
+
+        const diasDaSemana = ["domingo", "segunda-feira","terça-feira",
+        "quarta-feira", "quinta-feira", "sexta-feira","sabado"];
+
+        document.write("<p>Hoje é " + diasDaSemana[dataDeHoje] + ".</p>"); 
+
+        // usando um mapa
+        // programação declarativa
+        
+
+        const mapaDeDias = new Map([
+            [0, "domingo"], 
+            [1, "segunda-feira"],
+            [2, "Terça-feira"],
+            [3, "quarta-feira"],
+            [4, "quinta-feira"],
+            [5, "sexta-feira"],
+            [6, "Sabado"],
+        ]);
+        document.write("<p>Hoje é " + mapaDeDias.get(dataDeHoje) + ".</p>")
+
+        // vantagens :
+        // - posso declarar os valores fora de ordem
+        // - não fica associado a um indice que indica em 0 
+
+
     </script>
 </body>
 </html>
